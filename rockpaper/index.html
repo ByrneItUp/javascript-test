@@ -8,14 +8,47 @@
   <script>
 
 function computerPlay () {
-
   let options = ['Rock', 'Paper', 'Scissors'];
-  let answer = options[Math.floor(Math.random() * options.length)];
-  return answer;
-
+  let computerSelection = options[Math.floor(Math.random() * options.length)];
+  return computerSelection;
 }
 
+/*function playerSelection () {
+  let selection = prompt("Choose Rock, Paper or Scissors", "type here");
+  selection = selection.toLowerCase
+  return selection;
+}*/
 
+function roundRockPaperScissors (computerSelection, playerSelection) {
+  if (computerSelection = /Rock/i) {
+    if (playerSelection = /Scissors/i) {
+      alert("You lose! Rock beats Scissors");
+    } else if (playerSelection = /Paper/i) {
+        alert("Nice one! Paper beats Rock");
+      } else if (playerSelection = /Rock/i) {
+        alert("Two Rocks! It\s a draw!");
+      } else {alert("Oops something has gone wrong");
+    }
+  } else if (computerSelection = /Scissors/i) {
+    if (playerSelection = /Paper/i) {
+      alert("You lose! Scissors beats Paper");
+    } else if (playerSelection = /Rock/i) {
+        alert("Nice one! Rocks beats Scissors");
+      } else if (playerSelection = /Scissors/i) {
+        alert("Two Scissors! It\s a draw!");
+      } else {alert("Oops something has gone wrong");
+    }
+  } else if (computerSelection = /Paper/i) {
+    if (playerSelection = /Rock/i) {
+      alert("You lose! Paper beats Rock");
+    } else if (playerSelection = /Scissors/i) {
+        alert("Nice one! Scissors beats Paper");
+      } else if (playerSelection = /Paper/i) {
+        alert("Two Papers! It\s a draw!");
+      } else {alert("Oops something has gone wrong");
+    }
+  } else {alert("Hmmm something\'s not right here!")}
+}
 
 
   </script>
