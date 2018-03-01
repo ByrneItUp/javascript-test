@@ -13,13 +13,6 @@ function computerPlay () {
   return computerSelection;
 }
 
-
-/*function playerSelection () {
-  let selection = prompt("Choose Rock, Paper or Scissors", "type here");
-  selection = selection.toLowerCase
-  return selection;
-}*/
-
 function roundRockPaperScissors (computerSelection, playerSelection) {
   if (computerSelection == 'Rock') {
     if (playerSelection.toUpperCase() == 'SCISSORS') {
@@ -28,7 +21,7 @@ function roundRockPaperScissors (computerSelection, playerSelection) {
         return ("Nice one! Paper beats Rock");
       } else if (playerSelection.toUpperCase() == 'ROCK') {
         return ("Two Rocks! It\'s a draw!");
-      } else {return ("Oops something has gone wrong");
+      } else {return ("Oops something has gone wrong - please check your spelling");
     }
   } else if (computerSelection == 'Scissors') {
     if (playerSelection.toUpperCase() == 'PAPER') {
@@ -37,7 +30,7 @@ function roundRockPaperScissors (computerSelection, playerSelection) {
         return ("Nice one! Rock beats Scissors");
       } else if (playerSelection.toUpperCase() == 'SCISSORS') {
         return ("Two Scissors! It\'s a draw!");
-      } else {return ("Oops something has gone wrong");
+      } else {return ("Oops something has gone wrong - please check your spelling");
     }
   } else if (computerSelection == 'Paper') {
     if (playerSelection.toUpperCase() == 'ROCK') {
@@ -46,16 +39,54 @@ function roundRockPaperScissors (computerSelection, playerSelection) {
         return ("Nice one! Scissors beats Paper");
       } else if (playerSelection.toUpperCase() == 'PAPER') {
         return ("Two Papers! It\'s a draw!");
-      } else {return ("Oops something has gone wrong");
+      } else {return ("Oops something has gone wrong - please check your spelling");
     }
   } else {return ("Hmmm something\'s not right here!")}
 }
 
-const playerSelection = 'roCk';
-const computerSelection = computerPlay();
-console.log('Player Selection is ' + playerSelection);
-console.log('Computer Selection is ' + computerSelection);
-console.log(roundRockPaperScissors(computerSelection, playerSelection));
+
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  let gameNumber = 0;
+
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt("Rock, Paper or Scissors?");
+    let computerSelection = computerPlay();
+    console.log('Computer chose ' + computerSelection);
+    console.log('Player chose ' + playerSelection);
+    let roundResult = (roundRockPaperScissors(computerSelection, playerSelection));
+    console.log(roundResult);
+    if (roundResult.indexOf("Nice") == -1) {
+      if (roundResult.indexOf("lose") == -1) {
+        if (roundResult.indexOf("draw") == -1) {
+          i = (i - 1);
+        } else {
+          i = (i - 1);
+          console.log("Because you tied you get another go");
+        }
+      } else {
+        computerScore++;
+      }
+    } else {
+      playerScore++;
+    }
+    console.log("Score is Player: " + playerScore + ", Computer: " + computerScore);
+  }
+
+  if (playerScore > computerScore) {
+      console.log("Game over. Congratulations! You win by " + playerScore + " points to " + computerScore);
+    } else if (playerScore < computerScore) {
+      console.log("Game over. Sorry! The computer beat you by " + computerScore + " points to " + playerScore);
+    } else {
+      console.log("It\'s a draw! " + playerScore + " points each");
+    }
+  gameNumber = 0;
+  playerScore = 0;
+  computerScore = 0;
+  }
+
+game();
 
 
   </script>
