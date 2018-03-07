@@ -1,0 +1,20 @@
+let n = prompt('Enter a number to see primes smaller than this', '');
+
+alertPrime: for (let i=1; i<n; i++) { // this rotates through numbers up to n and alerts them
+
+  for (let j=2; j<i; j++) { // this checks if number i is prime or not
+    if (i % j == 0) continue alertPrime;} // if not prime then start i loop again
+
+alert(i);
+}
+
+
+
+
+first loop > outputs integers if prime
+  if i<n then output
+
+second loop > checks if integer is prime or not by dividing by all numbers up to itself
+  if i%j == 0 NOT PRIME
+  if i%j !==0 IS PRIME
+  this needs to loop until j<i to establish that all results of i%j do not == 0 to continue to alert(i)
