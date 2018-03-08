@@ -1,4 +1,4 @@
-const scoreCard = document.querySelector('.score');
+const scoreCard = document.querySelector('.scores');
 const playerScoreCard = document.querySelector('#player-score');
 const computerScoreCard = document.querySelector('#computer-score');
 const roundResultCard = document.querySelector('#round-result');
