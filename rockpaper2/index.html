@@ -3,92 +3,24 @@
 <html>
 <head>
   <title>Rock Paper Scissors Project</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <script>
+  <h1>Let's play Rock, Paper, Scissors!</h1>
+  <div class='container'>
+    <p>Please click one of the buttons below:</p>
+    <button id='Rock' class='choice'>'ROCK'</button>
+    <button id='Paper' class='choice'>'PAPER'</button>
+    <button id='Scissors' class='choice'>'SCISSORS'</button>
+  </div>
+  <div class='score'>
+    <div id='round-result'></div>
+    <div id='player-score'></div>
+    <div id='computer-score'></div>
+    <div id='final-result'></div>
+  </div>
 
-function computerPlay () {
-  let options = ['Rock', 'Paper', 'Scissors'];
-  let computerSelection = options[Math.floor(Math.random() * options.length)];
-  return computerSelection;
-}
-
-function roundRockPaperScissors (computerSelection, playerSelection) {
-  if (computerSelection == 'Rock') {
-    if (playerSelection.toUpperCase() == 'SCISSORS') {
-      return ("You lose! Rock beats Scissors");
-    } else if (playerSelection.toUpperCase() == 'PAPER') {
-        return ("Nice one! Paper beats Rock");
-      } else if (playerSelection.toUpperCase() == 'ROCK') {
-        return ("Two Rocks! It\'s a draw!");
-      } else {return ("Oops something has gone wrong - please check your spelling");
-    }
-  } else if (computerSelection == 'Scissors') {
-    if (playerSelection.toUpperCase() == 'PAPER') {
-      return ("You lose! Scissors beats Paper");
-    } else if (playerSelection.toUpperCase() == 'ROCK') {
-        return ("Nice one! Rock beats Scissors");
-      } else if (playerSelection.toUpperCase() == 'SCISSORS') {
-        return ("Two Scissors! It\'s a draw!");
-      } else {return ("Oops something has gone wrong - please check your spelling");
-    }
-  } else if (computerSelection == 'Paper') {
-    if (playerSelection.toUpperCase() == 'ROCK') {
-      return ("You lose! Paper beats Rock");
-    } else if (playerSelection.toUpperCase() == 'SCISSORS') {
-        return ("Nice one! Scissors beats Paper");
-      } else if (playerSelection.toUpperCase() == 'PAPER') {
-        return ("Two Papers! It\'s a draw!");
-      } else {return ("Oops something has gone wrong - please check your spelling");
-    }
-  } else {return ("Hmmm something\'s not right here!")}
-}
-
-
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let gameNumber = 0;
-
-  for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("Rock, Paper or Scissors?");
-    let computerSelection = computerPlay();
-    console.log('Computer chose ' + computerSelection);
-    console.log('Player chose ' + playerSelection);
-    let roundResult = (roundRockPaperScissors(computerSelection, playerSelection));
-    console.log(roundResult);
-    if (roundResult.indexOf("Nice") == -1) {
-      if (roundResult.indexOf("lose") == -1) {
-        if (roundResult.indexOf("draw") == -1) {
-          i = (i - 1);
-        } else {
-          i = (i - 1);
-          console.log("Because you tied you get another go");
-        }
-      } else {
-        computerScore++;
-      }
-    } else {
-      playerScore++;
-    }
-    console.log("Score is Player: " + playerScore + ", Computer: " + computerScore);
-  }
-
-  if (playerScore > computerScore) {
-      console.log("Game over. Congratulations! You win by " + playerScore + " points to " + computerScore);
-    } else if (playerScore < computerScore) {
-      console.log("Game over. Sorry! The computer beat you by " + computerScore + " points to " + playerScore);
-    } else {
-      console.log("It\'s a draw! " + playerScore + " points each");
-    }
-  gameNumber = 0;
-  playerScore = 0;
-  computerScore = 0;
-  }
-
-game();
-
-
+  <script src='script.js' type='text/javascript'>
   </script>
 </body>
 </html>

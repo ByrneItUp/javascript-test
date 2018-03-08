@@ -1,0 +1,41 @@
+[33mcommit b99ed30988e8959aa3e572b1091de2cd298dc513[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Wed Mar 7 16:07:34 2018 +0000
+
+    Copied rockpaper html file into new folder rockpaper2 to add UI
+
+[33mcommit fa54f79931b460ac5d365f54ab47e24614e2e17e[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Thu Mar 1 12:34:08 2018 +0000
+
+    Working version of Rock Paper Scissors
+
+[33mcommit 5e047c458e45e35969385c8fb3f63a17713be1b5[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Thu Mar 1 11:25:51 2018 +0000
+
+    Corrected the Rock Paper Scissors function and tested so it now works
+
+[33mcommit e3c8227b3ac839ca694819594572a34184cc76ab[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Thu Mar 1 09:45:51 2018 +0000
+
+    First draft of rock paper scissors function
+
+[33mcommit dff39a585b58badc5d7f8d012e9b5eb376ef1373[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Wed Feb 28 16:51:50 2018 +0000
+
+    Add function to randomly select Rock Paper or Scissors
+
+[33mcommit 3df7cd02b98b41c39cc2e73ce50fd0d12d7cf919[m
+Author: Victoria Walton <victoria.pikett@gmail.com>
+Date:   Wed Feb 28 16:40:23 2018 +0000
+
+    Creation of new bare bones html file and update to README to describe new Rock Paper Scissors project
+
+[33mcommit 1493de87a2cb22f33215f045a12399effbef1511[m
+Author: ByrneItUp <35488760+ByrneItUp@users.noreply.github.com>
+Date:   Wed Feb 28 16:22:42 2018 +0000
+
+    Initial commit
